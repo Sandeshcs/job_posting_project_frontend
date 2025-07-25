@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# INTERN HOUSE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A job post creation app which includes form to create job post, display all job posts, see full details of job post, delete job post and search any job post.
 
-## Available Scripts
+Built with React.js frontend, Express.js/Node.js backend, MongoDB database.
 
-In the project directory, you can run:
+---
+## App Demo Link
 
-### `npm start`
+[App Live Demo](https://job-posting-project-frontend.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Qucik Start
 
-### `npm test`
+```
+git clone https://github.com/Sandeshcs/job_posting_project_frontend.git
+cd job_posting_project_frontend
+npm install
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technologies
+- React.js
+- React Router
+- Node.js
+- Express.js
+- MongoDB
+- Bootstarp
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## App Demo Video
+Watch a walkthrough ( 6 minutes ) of all the major features of this app:
+[App Demo Video](https://drive.google.com/file/d/1gjXpvY1yHBz5TRlzRGs7zJdFSpKb581w/view?usp=sharing)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Features
+**Job Postings**
+- Display of all job posts(job name, company name, location, job type).
+- Option to delete job post.
+- View more details of job post.
+- Search any job posts by its name.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Post A Job**
+- Form to create a job post includes fields - job name, company name, location, salary, job type, job decription, job qualification.
+- Submit button to create a job post.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## API Reference
+### Job Post Api
+#### POST /api/jobpost/add
+- Creates new job post
 
-## Learn More
+Sample Resopnse:
+```
+{_id, job name, company name, location, salary, job type, job decription, job qualification}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### GET /api/jobposts/all
+- Display all job posts fields include (job name, company name, location, salary, job type, job decription, job qualification).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Sample Resopnse:
+```
+[{_id, job name, company name, location, salary, job type, job decription, job qualification}, ...]
+```
 
-### Code Splitting
+#### GET /api/jobposts/id/:jobPostId
+- Display a specific job post inlcudes (job name, company name, location, salary, job type, job decription, job qualification).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Sample Resopnse:
+```
+{_id, job name, company name, location, salary, job type, job decription, job qualification}
+```
 
-### Analyzing the Bundle Size
+#### DELETE /api/jobpost/delete/:jobpostId
+- Deletes a job post which we ask for.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Sample Response:
 
-### Making a Progressive Web App
+```
+{_id, job name, company name, location, salary, job type, job decription, job qualification}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+For bugs or feature request please reach out to sandeshcs2921@gmail.com.
